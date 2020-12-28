@@ -1,0 +1,17 @@
+<section class="contact-details flex  justify-center">
+    <div class="contact-container flex column justify-center align-center">
+    <img src="https://robohash.org/{{contact._id}}?set=set5" alt="profile" />
+    <h2>{{contact.name}} </h2>  
+   <h3>Phone: {{contact.phone}}</h3>
+   <h3>Email: {{contact.email}}</h3>
+   <div className="btn-controls flex">
+   <button (click)="goBack()">Go back</button>
+   <button (click)="goToEdit(contact._id)">Edit</button>
+   <button (click)="removeContact(contact._id)">Remove</button>
+   </div>
+</div>
+<div class="contact-transfer">
+    <transfer-fund [contact]="contact" [maxCoins]="user.coins" (onTransferCoins)="onTransferCoins($event)"></transfer-fund>
+    <move-list [title]="'Your Moves:'" [moves]="movesToShow"></move-list>
+</div>
+</section>

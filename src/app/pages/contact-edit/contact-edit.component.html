@@ -1,0 +1,12 @@
+<form class="contact-edit simple-form" (submit)="saveContact($event)">
+    <img *ngIf="contactToEdit._id" class="profile" src="https://robohash.org/{{contactToEdit._id}}?set=set5" alt="" srcset="">
+    <label>Name:</label>
+    <input autoFocus type="text" [(ngModel)]="contactToEdit.name" class="input input-editor" name="name"  />
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="contactToEdit.email" class="input input-editor" name="email"  />
+    <label>Phone:</label>
+    <input type="tel" class="input input-editor" [(ngModel)]="contactToEdit.phone" name="phone"  />
+    <span class="form-errors">{{errMsg}}</span>
+    <button>Save</button>
+    <button *ngIf="contactToEdit._id" type="remove" (click)="removeContact(contactToEdit._id)">Remove</button>
+</form>

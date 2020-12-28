@@ -1,0 +1,17 @@
+<div class="convert-money flex column align-center">
+  <h1> Buy Bitcoin instantly</h1>
+  <h3>Buy both Bitcoin Cash (BCH) and Bitcoin (BTC) now using a credit or debit card. </h3>
+  <div class="convert-money-form flex space-between">
+    <div class="converter-main flex column space-around">
+      <div class="converter flex wrap space-around">
+        <input type="number" class="input" [(ngModel)]="money" name="money" placeholder="Enter a money in Dollars" />
+        <input class="input" type="text" disabled placeholder="BTC" />
+        <button (click)="convertMoney()">Buy BTC</button>
+      </div>
+      <div *ngIf="res" class="res-container flex column align-center justify-center">
+        <h2>BTC Rate: {{rate}} Your Bitcoin Money: {{res}}</h2>
+        <button (click)="addCoinsEmit()">Add Money To Wallet</button>}
+      </div>
+    </div>
+  </div>
+</div>

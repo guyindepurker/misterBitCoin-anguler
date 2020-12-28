@@ -1,0 +1,16 @@
+<nav class="app-header-nav">
+  <div class="main-nav container flex space-between align-center">
+    <div class="logo-container">
+      <a [routerLink]="['']">Home</a>
+    </div>
+    <div class="btn-controls flex align-center">
+      <a [routerLink]="['/contact']">Contact</a>
+      <a [routerLink]="['/edit']">Add Contact</a>
+      <a [routerLink]="['/static']">Static</a>
+      <a *ngIf="!user else logout" [routerLink]="['/signup']">Signup</a>
+      <ng-template #logout>
+        <button  (click)="doLogout()">Logout</button>
+      </ng-template>
+    </div>
+  </div>
+</nav>

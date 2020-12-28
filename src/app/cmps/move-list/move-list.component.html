@@ -1,0 +1,8 @@
+<ul *ngIf="moves.length>0;else err" class="clean-list move-list">
+    <h2>{{title}}</h2>
+
+<move-preview *ngFor="let move of moves; let i = index" [move]="move"></move-preview>
+</ul>
+<ng-template #err>
+    <h1>You Dont have a moves yet</h1>
+</ng-template>

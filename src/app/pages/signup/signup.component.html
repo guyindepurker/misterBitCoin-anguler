@@ -1,0 +1,9 @@
+<div class="signup-form flex column center-center">
+    <h1 >Welcome to MisterBitcoin</h1>
+    <h2 class="title-signup">Sign up Or Login to manage your Bitcoin</h2>
+    <form class="simple-form flex wrap align-center" (ngSubmit)="doSignup()">
+        <input type="text" name="name" class="input" placeholder="Please enter your name" [(ngModel)]="name" />
+        <span class="form-errors">{{errMsg}}</span>
+        <button>Signup</button>
+    </form>
+</div>

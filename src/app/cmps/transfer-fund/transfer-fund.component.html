@@ -1,0 +1,10 @@
+<form class="transfer-fund" (ngSubmit)="transferCoins()">
+    <h3 class="title">Transfer coins to {{contact.name}}</h3>
+    <span class="left-amount">Your left coins: {{maxCoins}}</span>
+   <div class="transfer-container flex space-between align-center">
+    <label htmlFor="transfer">Amount <span class="amount-transfar">{{amount}}</span></label>
+    <input type="range" id="transfer" name="amount" value={amount} [(ngModel)]="amount" min="0" max="{{maxCoins}}" />
+    <span class="form-errors">{{errMsg}}</span>
+    <button class="trade">Transfer</button>
+   </div>
+</form>
